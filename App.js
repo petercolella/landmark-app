@@ -17,8 +17,8 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-  LoginScreen: { screen: LoginScreen },
-  HomeScreen: { screen: HomeScreen }
+  HomeScreen: { screen: HomeScreen },
+  LoginScreen: { screen: LoginScreen }
 })
 
 const styles = StyleSheet.create({
