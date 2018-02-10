@@ -6,8 +6,10 @@ import {
     Button
 } from 'react-native';
 
+import {TabNavigator} from 'react-navigation'
+
 class HomeScreen extends Component {
-    render(){
+    render() {
         return (
             <View style={styles.container}>
                 <Text>Welcome to unTurnd!</Text>
@@ -19,6 +21,29 @@ class HomeScreen extends Component {
     }
 }
 
+class Notifications extends Component {
+    render() {
+        return (
+            <View>
+                <Text>This is the Notification Screen</Text>
+            </View>
+        )
+    }
+}
+
+const HomeScreenTabNavigator = TabNavigator({
+
+    HomeScreen:{
+        screen: HomeScreen
+    },
+    Notifications:{
+        screen: Notifications
+    }
+
+}, {
+    animationEnabled: true
+})
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -28,4 +53,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;
+export default HomeScreenTabNavigator;
